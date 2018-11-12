@@ -83,10 +83,7 @@
     <Compile Include="Functions\Delays.asm">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Letters\A-C.asm">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Letters\D-F.asm">
+    <Compile Include="Letters\Alphabet.asm">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="main.asm">
