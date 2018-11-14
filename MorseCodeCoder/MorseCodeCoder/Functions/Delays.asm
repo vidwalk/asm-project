@@ -6,9 +6,9 @@
  */
 ;Function to delay the action for 100ms	
 Delay_100_ms:
-	LDI R22, 234
+	LDI R22, 100
 Delay_1_ms:
-	LDI R21, 52
+	LDI R21, 40
 Delay_1000_cycles:
 	LDI R20, 250
 Delay_4_cycles:

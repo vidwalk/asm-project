@@ -26,7 +26,7 @@ CALL Line
 CALL Dot
 JMP main_loop_start
 
-  D:
+ D:
 CALL Line
 CALL Dot
 CALL Dot
@@ -125,4 +125,125 @@ JMP main_loop_start
  
  T:
 CALL Line
+JMP main_loop_start
+
+ U:
+CALL Dot
+CALL Dot
+CALL Line
+JMP main_loop_start
+
+ V:
+CALL Dot
+CALL Dot
+CALL Dot
+CALL Line
+JMP main_loop_start
+
+ W:
+CALL Dot
+CALL Line
+CALL Line
+JMP main_loop_start
+
+//X, Y, Z are reserved for Assembly so we change X to XX etc.
+ XX:
+CALL Line
+CALL Dot
+CALL Dot
+CALL Line
+JMP main_loop_start
+
+ YY:
+CALL Line
+CALL Dot
+CALL Line
+CALL Line
+JMP main_loop_start
+
+ ZZ:
+CALL Line
+CALL Line
+CALL Dot
+CALL Dot
+JMP main_loop_start
+
+ ZERO:
+CALL Line
+CALL Line
+CALL Line
+CALL Line
+CALL Line
+JMP main_loop_start
+
+ ONE:
+CALL Dot
+CALL Line
+CALL Line
+CALL Line
+CALL Line
+JMP main_loop_start
+
+ TWO:
+CALL Dot
+CALL Dot
+CALL Line
+CALL Line
+CALL Line
+JMP main_loop_start
+
+ THREE:
+CALL Dot
+CALL Dot
+CALL Dot
+CALL Line
+CALL Line
+JMP main_loop_start
+
+ FOUR:
+CALL Dot
+CALL Dot
+CALL Dot
+CALL Dot
+CALL Line
+JMP main_loop_start
+
+ FIVE:
+CALL Dot
+CALL Dot
+CALL Dot
+CALL Dot
+CALL Dot
+JMP main_loop_start
+
+ SIX:
+CALL Line
+CALL Dot
+CALL Dot
+CALL Dot
+CALL Dot
+JMP main_loop_start
+
+ SEVEN:
+CALL Line
+CALL Line
+CALL Dot
+CALL Dot
+CALL Dot
+JMP main_loop_start
+
+ EIGHT:
+CALL Line
+CALL Line
+CALL Line
+CALL Dot
+CALL Dot
+JMP main_loop_start
+
+ NINE:
+CALL Line
+CALL Line
+CALL Line
+CALL Line
+CALL Dot
 JMP main_loop_start
