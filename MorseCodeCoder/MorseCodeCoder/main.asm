@@ -36,7 +36,6 @@ start:
 	OUT SPL, R16 ; set low byte of RAMEND in stack pointer low byte
 	LDI R16, HIGH(RAMEND)
 	OUT SPH, R16 ; set high byte of RAMEND in stack pointer high byte
-	; this is done so POP & PUSH doesnt invoke undefined behaviour
 
 ; Setup LED
 	LDI R19, (1 << PB7)
@@ -80,12 +79,10 @@ CPI R16, 0x50
 BREQ jump_to_not_P
 CPI R16, 0x51
 BREQ jump_to_not_Q
+;18th letter
 CPI R16, 0x52
 BREQ jump_to_not_R
-CPI R16, 0x53
-BREQ jump_to_not_S
-CPI R16, 0x54
-BREQ jump_to_not_T
+JMP secondHalf
 RJMP main_loop_start
 
 USART_Receive:
@@ -97,7 +94,7 @@ USART_Receive:
 
 ;Solution to error relative branch out of reach
 ;A relative branch means that the jump occurs by changing the position of the program counter(which instruction is being executed right now) by either adding or subtracting a value from it
-;JMP and CALL have a limit. JMP is -63 to 64
+;BREQ has a limit. BREQ is -63 to 64
 jump_to_not_A:
 CALL A
 jump_to_not_B:
@@ -134,10 +131,83 @@ jump_to_not_Q:
 CALL Q
 jump_to_not_R:
 CALL R
+
+;second half of the alphabet here because BREQ has call range of 64 lines SOLUTION TO Relative branch out of reach error
+secondHalf:
+CPI R16, 0x53
+BREQ jump_to_not_S
+CPI R16, 0x54
+BREQ jump_to_not_T
+CPI R16, 0x55
+BREQ jump_to_not_U
+CPI R16, 0x56
+BREQ jump_to_not_V
+CPI R16, 0x57
+BREQ jump_to_not_W
+CPI R16, 0x58
+BREQ jump_to_not_XX
+CPI R16, 0x59
+BREQ jump_to_not_YY
+CPI R16, 0x5A
+BREQ jump_to_not_ZZ
+CPI R16, 0x30
+BREQ jump_to_not_ZERO
+CPI R16, 0x31
+BREQ jump_to_not_ONE
+CPI R16, 0x32
+BREQ jump_to_not_TWO
+CPI R16, 0x33
+BREQ jump_to_not_THREE
+CPI R16, 0x34
+BREQ jump_to_not_FOUR
+CPI R16, 0x35
+BREQ jump_to_not_FIVE
+CPI R16, 0x36
+BREQ jump_to_not_SIX
+CPI R16, 0x37
+BREQ jump_to_not_SEVEN
+CPI R16, 0x38
+BREQ jump_to_not_EIGHT
+CPI R16, 0x39
+BREQ jump_to_not_NINE
+JMP main_loop_start
+
 jump_to_not_S:
 CALL S
 jump_to_not_T:
 CALL T
+jump_to_not_U:
+CALL U
+jump_to_not_V:
+CALL V
+jump_to_not_W:
+CALL W
+jump_to_not_XX:
+CALL XX
+jump_to_not_YY:
+CALL YY
+jump_to_not_ZZ:
+CALL ZZ
+jump_to_not_ZERO:
+CALL ZERO
+jump_to_not_ONE:
+CALL ONE
+jump_to_not_TWO:
+CALL TWO
+jump_to_not_THREE:
+CALL THREE
+jump_to_not_FOUR:
+CALL FOUR
+jump_to_not_FIVE:
+CALL FIVE
+jump_to_not_SIX:
+CALL SIX
+jump_to_not_SEVEN:
+CALL SEVEN
+jump_to_not_EIGHT:
+CALL EIGHT
+jump_to_not_NINE:
+CALL NINE
 
 
 

@@ -6,13 +6,13 @@
  */ 
 
 Dot:
-;Light up the LED after 100 ms
-    CALL Delay_100_ms
+;Light up the LED after 300 ms
+    CALL Delay_300_ms
 ;Light up the LED
 	
 	OUT PORTB, R19
-;It stays lit for 100ms
-	CALL Delay_100_ms
+;It stays lit for 300ms
+	CALL Delay_300_ms
 ;Stop the LED
 	OUT PORTB, R18
 
