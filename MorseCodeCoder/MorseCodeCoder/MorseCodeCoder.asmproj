@@ -92,9 +92,6 @@
     <Compile Include="MorseCode\Dot.asm">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MorseCode\FullStop.asm">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="MorseCode\Line.asm">
       <SubType>Code</SubType>
     </Compile>

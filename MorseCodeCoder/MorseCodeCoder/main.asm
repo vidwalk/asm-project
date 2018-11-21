@@ -36,7 +36,6 @@ start:
 	OUT SPL, R16 ; set low byte of RAMEND in stack pointer low byte
 	LDI R16, HIGH(RAMEND)
 	OUT SPH, R16 ; set high byte of RAMEND in stack pointer high byte
-	; this is done so POP & PUSH doesnt invoke undefined behaviour
 
 ; Setup LED
 	LDI R19, (1 << PB7)
