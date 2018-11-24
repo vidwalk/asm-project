@@ -42,7 +42,6 @@ Select type ASC
 
 Input a letter/digit then press enter
 
-| --- | --- | --- |
 | No.   | Letter/Digit   | Expected result |
 | --- | --- | --- |
 | 1 | E | Pause Dot |
