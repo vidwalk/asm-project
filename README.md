@@ -1,53 +1,64 @@
-# A Project for the AVR - Written in Assembler Language
-
-The purpose of this assignment is to write a small software project in assembler code. The MCU to be used is the AVR ATmega2560, and the project should include some form of interaction with sensors and actuators.
-
-## Description of the Project
-
-You are going to design and implement an application on the AVR atmega2560 microcontroller. This could be a game, a "smart-home" device, some sort of controller of electrical equipment. Your imagination and time are the only limits.
-
-The following are some non-functional requirements for the project:
-* The application must be written in AVR assembler
-* Your project must include some form of user interface (using sensors and actuators from the Arduino starter kit)
 
 
-### Learning goals (from the course description):
-* Create functioning assembler programs for microcontrollers
-* Analyse ASM programs (AVR MCU) and calculate execution time
-* Execute and debug assembler programs
-* Create applications using assembler programming
-* Integrate simple I/O devices in embedded applications
+# Morse Code Coder
 
 
-## Deliveries
 
-### Problem Formulation
-You are going to define and formulate the problem you want to solve in a problem statement. The project formulation is the product of the first two weeks, so take your time to generate a lot of ideas before deciding. 
+Students:
 
-### Project Plan (Analysis, design and test plan)
-* You must analyse the problem and describe it before implementing it. *Use for instance Activity or State Machine diagrams for this purpose.*
+Andrei Cioanca - 266105
 
-* Make a plan for testing your implementation. The plan should provide details on how to test the individual components or actions of your implementation.
+Claudiu Rediu - 266129
 
-* When you know what to solve and how, split the work into tasks and devide them between group members. *You can use githubs build in issue tracking or any other task tracking system to manage your tasks*
+Stefan Harabagiu – 266116
 
-### Implementation
-* Implement the project in AVR assembler. 
-* The code must be well-structured and extensively commented, and you should apply software patterns to solve general problems. 
-* The code should be keept under version control in a fork of this git repository.
+# Problem statement
 
-## Practical Information
-### Definition of Done
-The project should be demonstrated for me on class and your implementation code handed in on github in the form of a pull request. Analysis, design and other relevant material should be documented in the README.md. See section below for details on how to do that.
+The Morse code played an important part throughout history since its development in the 19th century. The most extensive use of the code was seen during World War 2 where standard long-range radio communication was impractical due to size and security. The solution was the Morse code. It was used in order to encode and decode the messages.
 
-*All group members should have participated actively in producing code and thus it should be possible to find all group members in the git commit history.*
+The Morse code is a method to encode text into series of dots and dashes which can be sent by light, sound or radio waves.
 
-### Deadline 
-Your implementation should be ready and handed in **before** the first lesson of week 49 (8.20am)
+Our project consists of a way for a user to type a specific letter or digit into the computer and then see it translated in Morse code through the microcontroller.
 
-### Github
-Before starting to commit any code, this repository should be forked to the github account of a group member. This forked repository is where you are going to create your Atmel Studio project and commit your assembler code. Eventually you can "Hand in" by creating a pull request. This will enable me to see your code and provide feedback on your project.
+# Building the Morse Code Coder
 
-The documentation should be written in the README.md on the repository. You can use markdown to format the document ([Markdown cheatsheet here](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf))
+To create the system, we need an Arduino Mega 2560 development board, a breadboard, a buzzer, at least one LED, a resistor and cables to direct the electricity.
 
-If you are unsure of the details, ask me or a fellow student og go watch a video (like this: https://www.youtube.com/watch?v=_NrSWLQsDL4) or read the documentation.
+The end of a cable will be set into port PB7 which is marked with 13 on the board and the other end will be set in series with a resistor. The LED will be put so it is in series with the resistor. If there is enough space on the breadboard, you can add the buzzer in series after the LED.  Take another cable, set one end into the GND(grounding) and the other at the end of the buzzer. Deploy the code and then you are ready to test it.
+
+If there isn&#39;t enough space to connect the buzzer, there is a solution. Use a cable to add another route to electricity so it can get to the buzzer. Set up a resistor before electricity enters in the buzzer. Take a last cable, connect it so it routes the electricity to the cable that goes in GND.
+
+# Testing
+
+Connect Arduino to the computer
+
+Start HTerm (Serial Communication)
+
+Set baud to 9600
+
+Click on connect
+
+Select type ASC
+
+Input a letter/digit then press enter
+
+| --- | --- | --- |
+| No.   | Letter/Digit   | Expected result |
+| --- | --- | --- |
+| 1 | E | Pause Dot |
+| 2 | T | Pause Line |
+| 3 | A | Pause Dot Pause Line |
+| 4 | J | Pause Dot Pause Line Pause Line Pause Line |
+| 5 | 5 | Pause Dot Pause Dot Pause Dot Pause Dot Pause Dot |
+| 6 | 9 | Pause Line Pause Line Pause Line Pause Line Pause Dot |
+
+Dot = 0.3 sec light up
+
+Line = 0.9 sec light up
+
+Pause (between dots/lines) = 0.3 sec
+
+16 MHz = 16 million cycles
+
+1 delay = 0.3 sec or 300 ms
+
