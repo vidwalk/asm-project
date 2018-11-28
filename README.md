@@ -34,6 +34,18 @@ The end of a cable will be set into port PB7 which is marked with 13 on the boar
 
 If there isn&#39;t enough space to connect the buzzer, there is a solution. Use a cable to add another route to electricity so it can get to the buzzer. Set up a resistor before electricity enters in the buzzer. Take a last cable, connect it so it routes the electricity to the cable that goes in GND.
 
+
+# Analysis and Design
+
+![alt text](https://i.imgur.com/zegMZhC.png)
+This is the graphical representation of the behavior of the system. The Arduino is waiting for input as long as the user still wants to input data. After doing the actions specific to the character inputted, it comes back to waiting for input.
+
+
+![alt text](https://i.imgur.com/RxcwHxN.png)
+
+The system goes through different phases as it performs the actions specific to each state. The latter goes into more detail with the implementation and results. The result is given by checking the data in a specific registry that was designated for storing the characters from the user. After the check, certain functions (Line and Dot) are called according to the translation into morse code.
+
+
 # Testing
 
 ![alt text](https://rhymehiphop.com/wp-content/uploads/2018/05/asap-rocky-testing-e1527025968488.jpg)
